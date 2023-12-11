@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tim Berners-Lee and the World Wide Web</title>
+
+    <script>
+        class YearElement extends HTMLElement{
+    connectedCallback(){
+        this.innerHTML = new Date().getFullYear();
+    }
+}
+customElements.define("x-fullyear", YearElement)
+
+</script>
 </head>
 
 <body>
@@ -40,7 +50,7 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="copyright-year">2023</span> My Website. All rights reserved.</p>
+        &copy; Ryan Pham <x-fullyear></x-fullyear>
     </footer>
 </body>
 
